@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: 'Reviews seeded successfully',reviews }),
+            body: JSON.stringify({ message: 'Reviews seeded successfully',reviews, reviewCount: reviews.length }),
         };
     } catch (error) {
         console.error('Error:', error);

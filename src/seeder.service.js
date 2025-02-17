@@ -98,7 +98,7 @@ class SeederService {
             //create a random review for the book
             const review = randomReview(book.title, book.author, Math.floor(Math.random() * 5) + 1);
 
-            reviews.push(review)
+            reviews.push({bookId:book.id, ...review})
             //update the book by pushing the review
             await Book.updateOne(
                 { id: book.id, reviews: { $exists: false } },
