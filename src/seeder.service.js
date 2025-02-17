@@ -117,9 +117,9 @@ class SeederService {
             //await book.reviews.push(review);
             //await newReview.save();
             //await book.save();
-            return reviews;
-
+            
         }
+        return reviews;
 
 
     }
